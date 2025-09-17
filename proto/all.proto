@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+// Chaves estrangeiras devem seguir forma id[_{descricao-do-campo}]_{TipoReferenciado}
+
+message Discipulo {
+  int32 id = 1;
+  string nome = 2;
+  optional int32 id_GrupoNaCasa = 3;
+}
+
+message GrupoNaCasa {
+  int32 id = 1;
+  int32 id_lider1_Discipulo = 2;
+  optional int32 id_lider2_Discipulo = 3;
+}
